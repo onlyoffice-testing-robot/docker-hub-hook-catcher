@@ -2,7 +2,7 @@ require 'sinatra'
 require 'json'
 
 get '/' do
-  File.read('docker-hub.json').to_json.gsub("\\n", '<br>')
+  send_file 'docker-hub.json'
 end
 
 post '/payload' do
