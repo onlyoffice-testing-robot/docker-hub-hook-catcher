@@ -2,7 +2,8 @@ require 'sinatra'
 require 'json'
 
 get '/' do
-  File.read(File.join('docker-hub.json', 'index.html'))
+  content_type :json
+  File.read('docker-hub.json').to_json
 end
 
 post '/payload' do
