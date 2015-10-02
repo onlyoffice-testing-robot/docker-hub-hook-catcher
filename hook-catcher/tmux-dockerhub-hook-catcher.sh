@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# crontab entry:
+# @reboot bash ~/RubymineProjects/SharedFunctional/services/docker-hub/hook-catcher/tmux-dockerhub-hook-catcher.sh
 tmux new-session -d -s dockerhub-hook-catcher
 tmux send-keys -t dockerhub-hook-catcher:0 "sleep 2m" C-m
 tmux send-keys -t dockerhub-hook-catcher:0 "cd ~/RubymineProjects/SharedFunctional/services/docker-hub/hook-catcher/" C-m
