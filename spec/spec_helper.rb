@@ -7,7 +7,9 @@ require File.expand_path '../../dockerhub_hook_catcher.rb', __FILE__
 
 module RSpecMixin
   include Rack::Test::Methods
-  def app() Sinatra::Application end
+  def app
+    Sinatra::Application
+  end
 end
 
 RSpec.configure { |c| c.include RSpecMixin }
