@@ -2,7 +2,11 @@ require 'sinatra'
 require 'json'
 
 get '/' do
-  send_file 'docker-hub.json'
+   if File.exist?('docker-hub.json')
+     send_file 'docker-hub.json'
+   else
+     'There is no payload send earlier to this server'
+   end
 end
 
 get '/payload' do
