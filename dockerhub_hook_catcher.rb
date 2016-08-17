@@ -1,16 +1,18 @@
 require 'sinatra'
 require 'json'
 
+NO_PAYLOAD_MESSAGE = 'There is no payload send earlier to this server'.freeze
+
+get '/payload' do
+  redirect '/'
+end
+
 get '/' do
   if File.exist?('docker-hub.json')
     send_file 'docker-hub.json'
   else
-    'There is no payload send earlier to this server'
+    NO_PAYLOAD_MESSAGE
   end
-end
-
-get '/payload' do
-  redirect '/'
 end
 
 post '/payload' do
