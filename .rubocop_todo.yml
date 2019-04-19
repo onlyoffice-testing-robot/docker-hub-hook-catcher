@@ -13,12 +13,6 @@ Metrics/BlockLength:
   Max: 29
 
 # Offense count: 1
-# Cop supports --auto-correct.
-Style/ExpandPathArguments:
-  Exclude:
-    - 'spec/spec_helper.rb'
-
-# Offense count: 1
 Style/MixinUsage:
   Exclude:
     - 'dockerhub_hook_catcher.rb'
