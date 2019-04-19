@@ -16,10 +16,3 @@ Metrics/BlockLength:
 Style/MixinUsage:
   Exclude:
     - 'dockerhub_hook_catcher.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AllowMultipleReturnValues.
-Style/RedundantReturn:
-  Exclude:
-    - 'helpers/app_helper.rb'

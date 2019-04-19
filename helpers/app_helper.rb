@@ -5,8 +5,8 @@ module AppHelper
   # @return [True, False] result
   def valid_json?(json)
     JSON.parse(json)
-    return true
+    true
   rescue JSON::ParserError
-    return false
+    false
   end
 end
