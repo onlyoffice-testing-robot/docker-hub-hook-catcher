@@ -1,7 +1,15 @@
 source 'https://rubygems.org'
-gem 'overcommit'
-gem 'rack-test'
-gem 'rake'
-gem 'rspec'
-gem 'rubocop', require: false
+
 gem 'sinatra'
+
+group :test do
+  gem 'codecov', require: false
+  gem 'rack-test'
+  gem 'rake'
+  gem 'rspec'
+end
+
+group :development do
+  gem 'overcommit', require: false
+  gem 'rubocop', require: false
+end
