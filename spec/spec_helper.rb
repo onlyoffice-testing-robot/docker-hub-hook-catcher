@@ -3,7 +3,7 @@ require 'rspec'
 
 ENV['RACK_ENV'] = 'test'
 
-require File.expand_path '../../dockerhub_hook_catcher.rb', __FILE__
+require File.expand_path '../dockerhub_hook_catcher.rb', __dir__
 
 module RSpecMixin
   include Rack::Test::Methods
