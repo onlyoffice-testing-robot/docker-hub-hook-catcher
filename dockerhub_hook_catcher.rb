@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'sinatra'
 require 'json'
 require_relative 'helpers/app_helper'
 
 include AppHelper
 
-NO_PAYLOAD_MESSAGE = 'There is no payload send earlier to this server'.freeze
-CORRECT_PAYLOAD = 'Correct payload recieved'.freeze
-FILE_WITH_DATA = 'docker-hub.json'.freeze
+NO_PAYLOAD_MESSAGE = 'There is no payload send earlier to this server'
+CORRECT_PAYLOAD = 'Correct payload recieved'
+FILE_WITH_DATA = 'docker-hub.json'
 
 get '/payload' do
   redirect '/'
