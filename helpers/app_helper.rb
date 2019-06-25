@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Methods to help
 module AppHelper
   # Check if json correct
